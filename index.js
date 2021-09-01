@@ -1,14 +1,14 @@
 const fs = require('fs');
-const { Client, Intents, MessageEmbed, Collection } = require('discord.js');
+const { Client, Intents, Collection } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 const config = require('dotenv').config();
 
 client.commands = new Collection();
 
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
+const commandFiles = fs.readdirSync('./slashCommands').filter(file => file.endsWith('.js'))
 
 for (const file of commandFiles) {
-   const command = require (`./commands/${file}`);
+   const command = require (`./slashCommands/${file}`);
    client.commands.set(command.data.name, command);
 }
 
