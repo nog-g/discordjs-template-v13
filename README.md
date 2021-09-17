@@ -7,12 +7,7 @@ FREE TO USE FOR YOUR DiscordJS Projects.
 ```bash
   git clone https://github.com/nog-g/discordjs-template-v13.git
   cd discordjs-template-v13
-  npm install discord.js@13.1.0
-  npm install @discordjs/builders
-  npm install @discordjs/rest
-  npm install common-tags
-  npm install dotenv
-  npm install fs
+  npm install
 ```
 
 ## ✅ Start project
